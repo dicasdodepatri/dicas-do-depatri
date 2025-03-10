@@ -1,0 +1,251 @@
+<script setup>
+
+</script>
+
+<template>
+
+      
+
+  <header>
+        <a href="#"><div class="logo-title"><img src="../assets/logo.svg" alt="logo" id="logo">
+        <h1>DEPATRI</h1></div></a>
+    </header>
+    <div class="content-options">
+
+    <div class="content-1">
+            <img src="../assets/lock.svg" alt="lock1" class="lock">
+
+            <h2>Conhecimento</h2>
+            <a href="#/golpes">GOLPES MAIS COMUNS</a>
+        </div>
+
+        <div class="content-2">
+            <img src="../assets/lock.svg" alt="lock2" class="lock">
+            <h2>Ferramentas</h2>
+            <a href="#/ferramentas">LINKS ÚTEIS</a>
+        </div>
+
+        <div class="content-3">
+            <img src="../assets/lock.svg" alt="lock2" class="lock">
+
+            <h2>Prevenção</h2>
+            <a href="https://docs.google.com/presentation/d/e/2PACX-1vRqgQLi9oW5ZUVD5Mgn1_Tjd3ZqKC1uRpSxfxKa7hI7c-Ezx1aRIUh_DhpfpxzBPG4XLIiFp5_LxlU6/pub?start=false&loop=true&delayms=5000">DICAS IMPORTANTES</a>
+    </div>
+
+        <div class="content-4">
+                    <img src="../assets/lock.svg" alt="lock3" class="lock">
+                    <h2>Proteção on-line</h2>
+                    <a href="">DICAS E SOFTWARES</a>
+        </div>
+
+        <div class="content-5">
+            <img src="../assets/lock.svg" alt="lock4" class="lock">
+
+            <h2>Home</h2>
+            <a href="#/">Dicas do depatri</a>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    align-items: center;
+    width: 85vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: FreeSans;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header i {
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding-right: 10px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#logo {
+    width: 15vw;
+    max-width: 120px;
+    margin-right: 10px;
+}
+.content-title {
+    font-family: FreeSans;
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 2.5rem;
+    color: #f2f2f2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.content-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    max-width: 65vw;
+}
+.content-options div {
+    background: linear-gradient(135deg, #4a4e69, #22223b); 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "TimeBurner", sans-serif;
+    padding: 20px;
+    border-radius: 16px;
+    color: #f2e9e4; 
+    width: 260px;
+    height: 320px;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+    text-align: center;
+}
+
+.content-options div:hover {
+    transform: translateY(-8px) scale(1.02); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6); 
+}
+
+.content-options h2 {
+    font-size: 1.6rem;
+    color: #f2e9e4; 
+    margin: 1rem 0;
+    transition: color 0.3s ease-in;
+}
+
+.content-options div:hover h2 {
+    color: #c9ada7; 
+}
+
+.content-options div a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #f2e9e4;
+    padding: 0.75rem 1rem;
+    background-color: #9a8c98;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 80%;
+}
+
+.content-options div a:hover {
+    background-color: #c9ada7; 
+    transform: scale(1.05); 
+}
+
+.lock {
+    width: 70px;
+    height: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5)); 
+    transition: transform 0.4s ease;
+}
+
+.content-options div:hover .lock {
+    transform: rotate(10deg) scale(1.05); 
+}
+
+
+@media (max-width: 768px) {
+  header {
+      padding-top: 30px;
+      padding-bottom: 20px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+}
+
+  .logo-title {
+      flex-direction: column;
+      gap: 8px;
+}
+
+  #logo {
+      width: 20vw;
+      margin-left: 0;
+}
+
+  .content-title {
+      font-size: 2rem;
+}
+
+  .content-options {
+      max-width: 90vw;
+      gap: 1.5rem;
+}
+
+  .content-options div {
+      width: 200px;
+      height: 280px;
+}
+
+  .content-options h2 {
+      font-size: 1.4rem;
+}
+}
+
+@media (max-width: 480px) {
+  header {
+      width: 95vw;
+}
+
+  .content-title {
+      font-size: 1.8rem;
+      margin: 2rem 0;
+}
+
+  #logo {
+      width: 30vw;
+      max-width: 80px;
+      margin: 0;
+}
+
+  .content-options {
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 90vw;
+}
+
+  .content-options div {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      padding: 20px;
+}
+
+  .content-options h2 {
+      font-size: 1.2rem;
+}
+
+  .content-options div a {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
+}
+}
+
+
+</style>
