@@ -41,8 +41,8 @@
         <div class="content-5">
             <img src="../assets/lock.svg" alt="lock4" class="lock">
 
-            <h2>Home</h2>
-            <a href="#/">Dicas do depatri</a>
+            <h2>Atendimento</h2>
+            <a href="#/">FALE CONOSCO</a>
         </div>
     </div>
 </template>
