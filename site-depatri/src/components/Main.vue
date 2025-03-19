@@ -42,7 +42,7 @@
             <img src="../assets/lock.svg" alt="lock4" class="lock">
 
             <h2>Atendimento</h2>
-            <a href="#/">FALE CONOSCO</a>
+            <a href="chat.whatsapp.com">FALE CONOSCO</a>
         </div>
     </div>
 </template>
