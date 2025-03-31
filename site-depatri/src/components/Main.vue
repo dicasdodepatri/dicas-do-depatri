@@ -1,7 +1,6 @@
 <script setup>
 
 </script>
-
 <template>
 
       
@@ -71,6 +70,7 @@ header a {
     text-decoration: none;
     color: white;
 }
+
 
 header i {
     cursor: pointer;
@@ -143,19 +143,32 @@ header i {
 }
 
 .content-options div a {
+
     font-size: 1rem;
     text-decoration: none;
     color: #f2e9e4;
+    text-align: left;  
     padding: 0.75rem 1rem;
-    background-color: #9a8c98;
     border-radius: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 80%;
+    transition: transform 0.3s ease, background 0.3s ease;
+    width: 100%;
+    background-position: 95%;
+    background-size: 22px 30px;
+    background-repeat: no-repeat;
+    background-color: #c9ada7;
+    background-image: url('../assets/right-arrow-circle.svg');
+
+
+
 }
 
 .content-options div a:hover {
+
+    border: solid 2px black;
     background-color: #c9ada7; 
     transform: scale(1.05); 
+    background-position: 112%;
+    animation: border-animation 1s linear infinite;
 }
 
 .lock {
@@ -169,7 +182,24 @@ header i {
     transform: rotate(10deg) scale(1.05); 
 }
 
+@keyframes border-animation {
 
+    0%{
+
+    }
+    25%{
+
+    }
+    50%{
+
+    }
+    75%{
+
+    }
+    100%{
+
+    }
+}
 @media (max-width: 768px) {
   header {
       padding-top: 30px;
@@ -246,6 +276,5 @@ header i {
       padding: 0.5rem 0.75rem;
 }
 }
-
 
 </style>
