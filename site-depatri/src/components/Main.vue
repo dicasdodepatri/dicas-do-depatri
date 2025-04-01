@@ -15,33 +15,33 @@
             <img src="../assets/lock.svg" alt="lock1" class="lock">
 
             <h2>Conhecimento</h2>
-            <a href="#/golpes">GOLPES MAIS COMUNS</a>
+            <span class="borda-animada"><a href="#/golpes">GOLPES MAIS COMUNS</a></span>
         </div>
 
         <div class="content-2">
             <img src="../assets/lock.svg" alt="lock2" class="lock">
             <h2>Ferramentas</h2>
-            <a href="#/ferramentas">LINKS ÚTEIS</a>
+            <span class="borda-animada"><a href="#/ferramentas">LINKS ÚTEIS</a></span>
         </div>
 
         <div class="content-3">
             <img src="../assets/lock.svg" alt="lock2" class="lock">
 
             <h2>Prevenção</h2>
-            <a href="https://docs.google.com/presentation/d/e/2PACX-1vRqgQLi9oW5ZUVD5Mgn1_Tjd3ZqKC1uRpSxfxKa7hI7c-Ezx1aRIUh_DhpfpxzBPG4XLIiFp5_LxlU6/pub?start=false&loop=true&delayms=5000">DICAS IMPORTANTES</a>
+            <span class="borda-animada"><a href="https://docs.google.com/presentation/d/e/2PACX-1vRqgQLi9oW5ZUVD5Mgn1_Tjd3ZqKC1uRpSxfxKa7hI7c-Ezx1aRIUh_DhpfpxzBPG4XLIiFp5_LxlU6/pub?start=false&loop=true&delayms=5000">DICAS IMPORTANTES</a></span>
     </div>
 
         <div class="content-4">
                     <img src="../assets/lock.svg" alt="lock3" class="lock">
                     <h2>Proteção on-line</h2>
-                    <a href="">DICAS E SOFTWARES</a>
+                    <span class="borda-animada"><a href="">DICAS E SOFTWARES</a></span>
         </div>
 
         <div class="content-5">
             <img src="../assets/lock.svg" alt="lock4" class="lock">
 
             <h2>Atendimento</h2>
-            <a href="https://chat.whatsapp.com">FALE CONOSCO</a>
+            <span class="borda-animada"><a href="https://chat.whatsapp.com">FALE CONOSCO</a></span>
         </div>
     </div>
 </template>
@@ -70,7 +70,6 @@ header a {
     text-decoration: none;
     color: white;
 }
-
 
 header i {
     cursor: pointer;
@@ -142,30 +141,32 @@ header i {
     color: #c9ada7; 
 }
 
-.content-options div a {
 
-    font-size: 1rem;
-    text-decoration: none;
-    color: #f2e9e4;
+
+.borda-animada{
     text-align: left;  
     padding: 0.75rem 1rem;
     border-radius: 10px;
-    transition: transform 0.3s ease, background 0.3s ease;
     width: 100%;
     background-position: 95%;
     background-size: 22px 30px;
     background-repeat: no-repeat;
     background-color: #c9ada7;
+    transition: transform 0.3s ease, background 0.3s ease;
     background-image: url('../assets/right-arrow-circle.svg');
-
-
+}
+.content-options div a {
+    
+    font-size: 1rem;
+    text-decoration: none;
+    color: #f2e9e4;
+    display: flex;
+    width: 100%;
+    height: 100%;
 
 }
 
-.content-options div a:hover {
-
-    border: solid 2px black;
-    background-color: #c9ada7; 
+.borda-animada:hover {
     transform: scale(1.05); 
     background-position: 112%;
     animation: border-animation 1s linear infinite;
@@ -182,24 +183,6 @@ header i {
     transform: rotate(10deg) scale(1.05); 
 }
 
-@keyframes border-animation {
-
-    0%{
-
-    }
-    25%{
-
-    }
-    50%{
-
-    }
-    75%{
-
-    }
-    100%{
-
-    }
-}
 @media (max-width: 768px) {
   header {
       padding-top: 30px;
