@@ -7,7 +7,7 @@
 
   <header>
         <a href="#"><div class="logo-title"><img src="../assets/logo.svg" alt="logo" id="logo">
-        <h1>DEPATRI</h1></div></a>
+        <h1>DICAS DO DEPATRI</h1></div></a>
     </header>
     <div class="content-options">
 
@@ -37,12 +37,6 @@
                     <span class="borda-animada"><a href="">DICAS E SOFTWARES</a></span>
         </div>
 
-        <div class="content-5">
-            <img src="../assets/lock.svg" alt="lock4" class="lock">
-
-            <h2>Atendimento</h2>
-            <span class="borda-animada"><a href="https://chat.whatsapp.com">FALE CONOSCO</a></span>
-        </div>
     </div>
 </template>
 
@@ -121,7 +115,7 @@ header a:hover {
     gap: 2.5rem;
     margin: 0 auto;
     padding: 2rem 0 4rem 0;
-    max-width: 1200px;
+    max-width: 900px;
     width: 85vw;
 }
 
@@ -136,7 +130,7 @@ header a:hover {
     border-radius: var(--border-radius);
     color: var(--primary-light);
     width: 280px;
-    height: 340px;
+    height: 350px;
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
@@ -375,5 +369,6 @@ header a:hover {
         padding: 0.75rem 1rem;
     }
 }
+
 
 </style>
