@@ -28,13 +28,19 @@
             <img src="../assets/lock.svg" alt="lock2" class="lock">
 
             <h2>Prevenção</h2>
-            <span class="borda-animada"><a href="https://docs.google.com/presentation/d/e/2PACX-1vRqgQLi9oW5ZUVD5Mgn1_Tjd3ZqKC1uRpSxfxKa7hI7c-Ezx1aRIUh_DhpfpxzBPG4XLIiFp5_LxlU6/pub?start=false&loop=true&delayms=5000">DICAS IMPORTANTES</a></span>
+            <span class="borda-animada"><a href="">DICAS IMPORTANTES</a></span>
     </div>
 
         <div class="content-4">
                     <img src="../assets/lock.svg" alt="lock3" class="lock">
                     <h2>Proteção on-line</h2>
-                    <span class="borda-animada"><a href="">DICAS E SOFTWARES</a></span>
+                    <span class="borda-animada"><a href="">DICAS E FERRAMENTAS</a></span>
+        </div>
+
+        <div class="content-4">
+                    <img src="../assets/lock.svg" alt="lock3" class="lock">
+                    <h2>Atendimento</h2>
+                    <span class="borda-animada"><a href="">FALE COM UM AGENTE</a></span>
         </div>
 
     </div>
@@ -112,7 +118,7 @@ header a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 1.5rem;
     margin: 0 auto;
     padding: 2rem 0 4rem 0;
     max-width: 900px;
@@ -348,7 +354,7 @@ header a:hover {
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
-        max-width: 95vw;
+        max-width: 85vw;
         padding: 0.5rem 0 2.5rem 0;
     }
 
