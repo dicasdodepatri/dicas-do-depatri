@@ -15,32 +15,32 @@
             <img src="../assets/lock.svg" alt="lock1" class="lock">
 
             <h2>Conhecimento</h2>
-            <span class="borda-animada"><a href="#/golpes">GOLPES MAIS COMUNS</a></span>
+            <span class="borda-animada" onclick="window.open('#/golpes',target='_self')">GOLPES MAIS COMUNS</span>
         </div>
 
         <div class="content-2">
             <img src="../assets/lock.svg" alt="lock2" class="lock">
             <h2>Ferramentas</h2>
-            <span class="borda-animada"><a href="#/ferramentas">LINKS ÚTEIS</a></span>
+            <span class="borda-animada" onclick="window.open('#/ferramentas',target='_self')">LINKS ÚTEIS</span>
         </div>
 
         <div class="content-3">
             <img src="../assets/lock.svg" alt="lock2" class="lock">
 
             <h2>Prevenção</h2>
-            <span class="borda-animada"><a href="">DICAS IMPORTANTES</a></span>
+            <span class="borda-animada" onclick="window.open('#',target='_self')">DICAS IMPORTANTES</span>
     </div>
 
         <div class="content-4">
                     <img src="../assets/lock.svg" alt="lock3" class="lock">
                     <h2>Proteção on-line</h2>
-                    <span class="borda-animada"><a href="">DICAS E FERRAMENTAS</a></span>
+                    <span class="borda-animada" onclick="window.open('#',target='_self')">DICAS E FERRAMENTAS</span>
         </div>
 
         <div class="content-4">
                     <img src="../assets/lock.svg" alt="lock3" class="lock">
                     <h2>Atendimento</h2>
-                    <span class="borda-animada"><a href="">FALE COM UM AGENTE</a></span>
+                    <span class="borda-animada" onclick="window.open('#',target='_self')">FALE COM UM AGENTE</span>
         </div>
 
     </div>
@@ -182,21 +182,10 @@ header a:hover {
 .borda-animada:hover {
     transform: scale(1.1);
     background-position: 112%;
+ 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
-.content-options div a {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    color: var(--primary-dark);
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
 
 
 
@@ -214,6 +203,14 @@ header a:hover {
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     background-image: url('../assets/right-arrow-circle.svg');
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: url("../assets/cursor.svg"),pointer;
+ 
 }
 
 
@@ -228,6 +225,7 @@ header a:hover {
     z-index: -1;
     border-radius: 10px;
     animation: move-around 3.5s linear infinite;
+
 }
 
 @keyframes move-around {

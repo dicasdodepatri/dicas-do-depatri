@@ -4,12 +4,14 @@ import Main from './components/Main.vue'
 import Golpes from './components/Golpes.vue'
 import Ferramentas from './components/Ferramentas.vue'
 import NotFound from './components/NotFound.vue'
+import ConsultarDadosVazados from './components/ConsultarDadosVazados.vue'
 
 const routes = {
   '/': Main,
   '/golpes': Golpes,
   '/ferramentas': Ferramentas,
-  '/not-found':NotFound
+  '/consultar-dados-vazados':ConsultarDadosVazados,
+  '/not-found':NotFound,
 }
 const currentPath = ref(window.location.hash)
 
