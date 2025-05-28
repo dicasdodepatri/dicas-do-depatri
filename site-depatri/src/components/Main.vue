@@ -33,14 +33,8 @@
 
         <div class="content-4">
                     <img src="../assets/lock.svg" alt="lock3" class="lock">
-                    <h2>Proteção on-line</h2>
-                    <span class="borda-animada" onclick="window.open('#',target='_self')">DICAS E FERRAMENTAS</span>
-        </div>
-
-        <div class="content-4">
-                    <img src="../assets/lock.svg" alt="lock3" class="lock">
                     <h2>Atendimento</h2>
-                    <span class="borda-animada" onclick="window.open('#',target='_self')">FALE COM UM AGENTE</span>
+                    <span class="borda-animada" onclick="window.open('#',target='_self')">AGENTE AUTÔNOMO</span>
         </div>
 
     </div>
@@ -118,7 +112,7 @@ header a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 4rem;
     margin: 0 auto;
     padding: 2rem 0 4rem 0;
     max-width: 900px;
