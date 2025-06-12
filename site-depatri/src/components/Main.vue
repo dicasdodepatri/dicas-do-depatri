@@ -34,7 +34,7 @@
         <div class="content-4">
                     <img src="../assets/lock.svg" alt="lock3" class="lock">
                     <h2>Atendimento</h2>
-                    <span class="borda-animada" onclick="window.open('#',target='_self')">AGENTE AUTÔNOMO</span>
+                    <span class="borda-animada" onclick="window.open('#/agente-autonomo',target='_self')">AGENTE AUTÔNOMO</span>
         </div>
 
     </div>

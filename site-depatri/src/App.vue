@@ -5,11 +5,13 @@ import Golpes from './components/Golpes.vue'
 import Ferramentas from './components/Ferramentas.vue'
 import NotFound from './components/NotFound.vue'
 import ConsultarDadosVazados from './components/ConsultarDadosVazados.vue'
+import AgenteAutonomo from './components/AgenteAutonomo.vue'
 
 const routes = {
   '/': Main,
   '/golpes': Golpes,
   '/ferramentas': Ferramentas,
+  '/agente-autonomo':AgenteAutonomo,
   '/consultar-dados-vazados':ConsultarDadosVazados,
   '/not-found':NotFound,
 }
