@@ -1,69 +1,75 @@
 <script setup>
+import { ref } from 'vue';
+import axios from 'axios';
 
+const userMessage = ref('');
+const botMessage = ref('Olá, sou um agente autônomo! <br/><br/> Meu papel é dizer qual é a chance de uma história contada por você ser golpe!<br/><br/> me envie uma mensagem contanto a sua história!');
+const isLoading = ref(false);
+
+const sendMessage = async () => {
+  if (!userMessage.value.trim()) return;
+
+  isLoading.value = true;
+  botMessage.value = 'Aguarde...';
+
+  try {
+    const response = await axios.post('https://flask2-g3g9.onrender.com', {
+      mensagem: userMessage.value.trim()
+    });
+
+    if (response.data && response.data.resposta) {
+      botMessage.value = response.data.resposta.split('|')[1].replace(/\\n|\n|\r\n/g, '<br/>');
+    } else {
+      botMessage.value = 'Resposta inválida do servidor. Tente novamente.';
+    }
+  } catch (error) {
+    console.error('Erro na API:', error);
+    botMessage.value = 'Falhou. Tente novamente.';
+  } finally {
+    isLoading.value = false;
+    userMessage.value = '';
+  }
+};
 </script>
 
 <template>
   <div class="chat-container">
     <header>
-      <a href="#"><div class="logo-title"><img src="../assets/logo.svg" alt="logo" id="logo">
-      <h1>DICAS DO DEPATRI</h1></div></a>
+      <a href="#"><div class="logo-title">
+        <img src="../assets/logo.svg" alt="logo" id="logo">
+        <h1>DICAS DO DEPATRI</h1>
+      </div></a>
     </header>
     
     <div class="chat-content">
       <div class="chat-card">
         <div class="chat-messages">
           <div class="bot-message">
-            <p>Olá, sou um agente autônomo! Posso verificar se algo é golpe com base na sua história. Conta o que aconteceu que eu te ajudo! <br/>
-Exemplo: Recebi uma mensagem no WhatsApp de alguém se passando por um banco pedindo meus dados pessoais [pode dar mais detalhes].</p>
+            <p v-html="botMessage"></p>
           </div>
         </div>
         <div class="chat-input">
-          <textarea v-model="userMessage" placeholder="Digite sua história aqui..."></textarea>
+          <textarea 
+            v-model="userMessage" 
+            placeholder="ex: recebi uma mensagem via telefone pedindo informações pessoais, se passando por um banco no dia..."
+            :disabled="isLoading"
+            @keyup.enter.prevent="sendMessage"
+          ></textarea>
           <div class="chat-buttons">
-            <span class="borda-animada"><a href="#" @click.prevent="sendMessage">ENVIAR</a></span>
-            <span class="borda-animada"><a href="#">VOLTAR PARA HOME</a></span>
+            <span class="borda-animada">
+              <a href="#" @click.prevent="sendMessage" :class="{ 'disabled': isLoading }">
+                {{ isLoading ? 'ENVIANDO...' : 'ENVIAR' }}
+              </a>
+            </span>
+            <span class="borda-animada">
+              <a href="#">VOLTAR PARA HOME</a>
+            </span>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      userMessage: '',
-    };
-  },
-  methods: {
-    sendMessage() {
-
-
-        const userMessage = document.querySelector('textarea').value
-        axios({
-        
-            method: 'post',
-        
-            url: 'https://flask2-g3g9.onrender.com',
-        
-            data: {
-        
-                value
-        
-            }
-        
-        })
-        
-            .then(response => console.log(response))
-        
-            .catch(error => console.log(error));
-      console.log('Mensagem enviada:', this.userMessage);
-      userMessage = ''; // Limpa o campo após envio
-    },
-  },
-};
-</script>
 
 <style scoped>
 * {
@@ -92,8 +98,10 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-}.bot-message{
-    font-family:Arial, Helvetica, sans-serif;
+}
+
+.bot-message {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -220,6 +228,11 @@ header a:hover {
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
+.chat-input textarea:disabled {
+    background: rgba(200, 200, 200);
+    cursor: not-allowed;
+}
+
 .chat-buttons {
     display: flex;
     justify-content: space-between;
@@ -245,7 +258,12 @@ header a:hover {
     display: block;
 }
 
-.borda-animada:hover {
+.borda-animada a.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.borda-animada:hover:not(:has(a.disabled)) {
     background: var(--accent-hover);
     transform: scale(1.05);
 }
