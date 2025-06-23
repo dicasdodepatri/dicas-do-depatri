@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import axios from 'axios';
 
 const userMessage = ref('');
-const botMessage = ref('Olá, sou um agente autônomo! <br/><br/> Meu papel é dizer qual é a chance de uma história contada por você ser golpe!<br/><br/> me envie uma mensagem contanto a sua história!');
+const botMessage = ref('Olá, sou um agente autônomo! <br/><br/> Meu papel é dizer qual é a chance de uma história contada por você ser golpe!<br/><br/> Envie-me uma mensagem contanto a sua história!');
 const isLoading = ref(false);
 
 const sendMessage = async () => {

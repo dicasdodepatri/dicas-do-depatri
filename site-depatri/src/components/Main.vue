@@ -28,7 +28,7 @@
             <img src="../assets/lock.svg" alt="lock2" class="lock">
 
             <h2>Prevenção</h2>
-            <span class="borda-animada" onclick="window.open('#',target='_self')">DICAS IMPORTANTES</span>
+            <span class="borda-animada" onclick="window.open('./golpes-comuns/prevencao.pdf',target='_self')">DICAS IMPORTANTES</span>
     </div>
 
         <div class="content-4">
@@ -179,9 +179,6 @@ header a:hover {
  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-
-
 
 .borda-animada {
     text-align: left;  
